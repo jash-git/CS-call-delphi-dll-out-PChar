@@ -1,0 +1,16 @@
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\bin\x86\Debug\net6.0\ConsoleXML.exe
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\bin\x86\Debug\net6.0\ConsoleXML.deps.json
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\bin\x86\Debug\net6.0\ConsoleXML.runtimeconfig.json
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\bin\x86\Debug\net6.0\ConsoleXML.dll
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\bin\x86\Debug\net6.0\ConsoleXML.pdb
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.csproj.AssemblyReference.cache
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.AssemblyInfoInputs.cache
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.AssemblyInfo.cs
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.csproj.CoreCompileInputs.cache
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.dll
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\refint\ConsoleXML.dll
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.pdb
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ConsoleXML.genruntimeconfig.cache
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\obj\x86\Debug\net6.0\ref\ConsoleXML.dll
+C:\Users\devel\Desktop\ConsoleXML\ConsoleXML\bin\x86\Debug\net6.0\POS_ECM.dll

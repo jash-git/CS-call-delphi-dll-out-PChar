@@ -1,0 +1,67 @@
+C# 呼叫delphi dll 並且傳入字串指標和接收回傳資料 [c# call delphi dll out PChar]
+
+資料來源: https://stackoverflow.com/questions/5086645/how-to-use-delphi-dllwith-pchar-type-in-c-sharp
+
+library Project2;
+
+uses
+  SysUtils;
+
+{$R *.res}
+
+function SimpleConv(const s: string): string;
+begin
+  Result := LowerCase(s);
+end;
+
+function MsgEncode(pIn: PWideChar; out pOut: PWideChar): LongBool; stdcall;
+var
+  sOut: string;
+  BuffSize: Integer;
+begin
+  sOut := SimpleConv(pIn);
+  BuffSize := SizeOf(Char)*(Length(sOut)+1);//+1 for null-terminator
+  GetMem(pOut, BuffSize);
+  FillChar(pOut^, BuffSize, 0);
+  Result := Length(sOut)>0;
+  if Result then
+    Move(PChar(sOut)^, pOut^, BuffSize);
+end;
+
+procedure BlockFree(p: Pointer); stdcall;
+begin
+  FreeMem(p);//safe to call when p=nil
+end;
+
+exports
+  MsgEncode,
+  BlockFree;
+
+begin
+end.
+
+
+using System;
+using System.Runtime.InteropServices;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        [DllImport("project2.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.StdCall)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool MsgEncode(string pIn, out IntPtr pOut);
+
+        [DllImport("project2.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.StdCall)]
+        public static extern void BlockFree(IntPtr p);
+
+        static void Main(string[] args)
+        {
+            IntPtr pOut;
+            string msg;
+            if (MsgEncode("Hello from C#", out pOut))
+                msg = Marshal.PtrToStringAuto(pOut);
+                BlockFree(pOut);
+        }
+    }
+}
